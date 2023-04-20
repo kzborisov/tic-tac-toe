@@ -47,9 +47,9 @@ function App() {
 
     return (
 
-        <div className='flex flex-col h-screen max-h-screen items-center justify-center'>
+        <div className='flex flex-col h-screen max-h-screen items-center justify-center overflow-hidden'>
             {winner &&
-                <div className="mt-10 flex flex-col justify-center items-center">
+                <div className="flex flex-col justify-center items-center">
                     <p className='text-2xl text-gray-600'>Winner Is: {winner}</p>
                 </div>
             }
@@ -71,7 +71,7 @@ function App() {
                 </div>
             </div>
 
-            <div className="mt-10 flex flex-col justify-center items-center">
+            <div className="mt-6 flex flex-col justify-center items-center">
                 <p className='text-2xl text-gray-600'>Next Player: {isX ? "X" : "O"}</p>
                 <button
                     className='bg-purple-200 p-4 rounded-3xl m-4 text-xl text-gray-600'
