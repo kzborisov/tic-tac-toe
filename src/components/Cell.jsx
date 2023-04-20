@@ -1,18 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Cell = () => {
-    const [clicked, setClicked] = useState(false);
-
-    const handleClick = () => {
-        console.log("clicked");
-        setClicked(c => !c);
-    }
+const Cell = ({ value, onClick }) => {
     return (
         <div
-            className={`${clicked ? "bg-blue-200" : "bg-red-200"} cursor-pointer rounded-md flex justify-center items-center`}
-            onClick={handleClick}
+            className={`m-2 shadow-md bg-white cursor-pointer rounded-md flex justify-center items-center h-[90px] w-[90px] md:h-[100px] md:w-[100px] `}
+            onClick={onClick}
         >
-            <p className='text-3xl text-gray-600 uppercase'>{clicked ? "X" : "O"}</p>
+            <p
+                className='text-3xl text-gray-600'
+            >{value}</p>
         </div>
     )
 }
